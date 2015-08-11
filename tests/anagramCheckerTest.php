@@ -44,9 +44,33 @@
         $this->assertEquals(array("c", "a", "t"), $result);
     }
 
+    //Reassemble word from string
+    //input-> "hat"
+    //output-> "hat"
+
+    function test_makeAnagram_rearrrange_letters()
+    {
+        $test_anagramChecker = new AnagramChecker;
+        $input = "hat";
+
+        $result = $test_anagramChecker->makeAnagram($input);
+
+        $this->assertEquals(array("hat"), $result);
+    }
+
     //Create permutations from the input
     //input-> "dog"
     //output-> "d-o-g", "d-g-o", "g-d-o", "g-o-d", "o-g-d", "o-d-g"
+
+    // function test_makeAnagram_rearrrange_letters()
+    // {
+    //     $rest_anagramChecker = new AnagramChecker;
+    //     input = "dog";
+    //
+    //     $result = $test_anagramChecker->makeAnagram($input);
+    //
+    //     $this->assertEquals(array())
+    // }
 
     //Retrieve list of possible anagrams
     //input-> "hat"
