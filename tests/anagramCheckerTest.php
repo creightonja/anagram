@@ -16,8 +16,18 @@
 
     }
     //Sets input to lowercase
-    //input-> B
-    //output-> b
+    //input-> Won
+    //output-> won
+    function test_makeAnagram_lowercase()
+    {
+        $test_anagramChecker = new AnagramChecker;
+        $input = "Won";
+
+        $result = $test_anagramChecker->makeAnagram($input);
+
+        $this->assertEquals("won", $result);
+    }
+
 
     //Breaks input into individual letters
     //input-> "cat"
