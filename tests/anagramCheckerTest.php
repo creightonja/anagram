@@ -8,7 +8,7 @@
     function test_makeAnagram_printInput()
     {
         $test_anagramChecker = new AnagramChecker;
-        $input = "Bee"
+        $input = "Bee";
 
         $result = $test_anagramChecker->makeAnagram($input);
 
