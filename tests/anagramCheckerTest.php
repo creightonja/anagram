@@ -12,7 +12,7 @@
 
         $result = $test_anagramChecker->makeAnagram($input);
 
-        $this->assertEquals(array("b"), $result);
+        $this->assertEquals("b", $result);
 
     }
 
@@ -55,7 +55,7 @@
 
         $result = $test_anagramChecker->makeAnagram($input);
 
-        $this->assertEquals(array("hat"), $result);
+        $this->assertEquals("hat", $result);
     }
 
     //Create permutations from the input
