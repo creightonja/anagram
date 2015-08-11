@@ -3,7 +3,8 @@
     {
         function makeAnagram($input)
         {
-            return ($input);
+            $lc_input = strtolower($input);
+            return ($lc_input);
         }
     }
 ?>
