@@ -11,11 +11,11 @@
     {
         $test_anagramChecker = new AnagramChecker;
         $input_word = "a";
-        $input_check_list = array("a");
+        $input_check_list = "a";
 
         $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
 
-        $this->assertEquals(array("a"), $result);
+        $this->assertEquals("a", $result);
     }
     //Check to see if single letter does not match
     //input-> "a" | "b"
@@ -25,11 +25,11 @@
     {
         $test_anagramChecker = new AnagramChecker;
         $input_word = "a";
-        $input_check_list = array("b");
+        $input_check_list = "b";
 
         $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
 
-        $this->assertEquals(array("No matches found"), $result);
+        $this->assertEquals("No matches found", $result);
     }
 
     //Check to see if one match in multiple inputs
@@ -39,27 +39,27 @@
     {
         $test_anagramChecker = new AnagramChecker;
         $input_word = "a";
-        $input_check_list = array("a","b");
+        $input_check_list = "a, b";
 
         $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
 
-        $this->assertEquals(array("a"), $result);
+        $this->assertEquals("a", $result);
 
     }
 
     //Check to see if multiple matches from multiple inputs
     //input-> "a" | "a", "a"
     //output-> "a", "a"
-    function test_checkAnagram_multi_match()
-    {
-        $test_anagramChecker = new AnagramChecker;
-        $input_word = "a";
-        $input_check_list = array("a", "a");
-
-        $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
-
-        $this->assertEquals(array("a", "a"), $result);
-    }
+    // function test_checkAnagram_multi_match()
+    // {
+    //     $test_anagramChecker = new AnagramChecker;
+    //     $input_word = "a";
+    //     $input_check_list = array("a", "a");
+    //
+    //     $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
+    //
+    //     $this->assertEquals(array("a", "a"), $result);
+    // }
 
     //Check to see if multiple characters return a match
     //input-> "ab" | "ab"
@@ -68,11 +68,11 @@
     {
         $test_anagramChecker = new AnagramChecker;
         $input_word = "ab";
-        $input_check_list = array("ab");
+        $input_check_list = "ab";
 
         $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
 
-        $this->assertEquals(array("ab"), $result);
+        $this->assertEquals("ab", $result);
 
     }
 
@@ -83,11 +83,11 @@
     {
         $test_anagramChecker = new AnagramChecker;
         $input_word = "ab";
-        $input_check_list = array("ba");
+        $input_check_list = "ba";
 
         $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
 
-        $this->assertEquals(array("ba"), $result);
+        $this->assertEquals("ba", $result);
     }
     //Check to see if multiple characters return a match of multiple anagrams
     //input-> "abc" | "acb", "bca"
