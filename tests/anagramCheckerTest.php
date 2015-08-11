@@ -15,7 +15,7 @@
 
         $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
 
-        $this->assertEquals("a", result);
+        $this->assertEquals("a", $result);
     }
     //Check to see if single letter does not match
     //input-> "a" | "b"
