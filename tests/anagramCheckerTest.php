@@ -8,11 +8,11 @@
     function test_makeAnagram_printInput()
     {
         $test_anagramChecker = new AnagramChecker;
-        $input = "bee";
+        $input = "b";
 
         $result = $test_anagramChecker->makeAnagram($input);
 
-        $this->assertEquals("bee", $result);
+        $this->assertEquals(array("b"), $result);
 
     }
 
@@ -22,11 +22,11 @@
     function test_makeAnagram_lowercase()
     {
         $test_anagramChecker = new AnagramChecker;
-        $input = "Won";
+        $input = "W";
 
         $result = $test_anagramChecker->makeAnagram($input);
 
-        $this->assertEquals("won", $result);
+        $this->assertEquals(array("w"), $result);
     }
 
 

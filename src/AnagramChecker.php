@@ -4,7 +4,10 @@
         function makeAnagram($input)
         {
             $lc_input = strtolower($input);
-            return ($lc_input);
+
+            $input_array = str_split($lc_input);
+
+            return ($input_array);
         }
     }
 ?>
