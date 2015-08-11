@@ -7,7 +7,16 @@
     //Check to see if single letter input matches
     //input-> "a" | "a"
     //output-> "a"
+    function test_checkAnagram_single_letter()
+    {
+        $test_anagramChecker = new AnagramChecker;
+        $input_word = "a";
+        $input_check_list = "a";
 
+        $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
+
+        $this->assertEquals("a", result);
+    }
     //Check to see if single letter does not match
     //input-> "a" | "b"
     //output-> "No matches found"
