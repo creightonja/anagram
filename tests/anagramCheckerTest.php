@@ -79,7 +79,16 @@
     //Check to see if multiple characters return a match of anagram characters
     //input-> "ab" | "ba"
     //output-> "ba"
+    function test_checkAnagram_double_letter_no_match()
+    {
+        $test_anagramChecker = new AnagramChecker;
+        $input_word = "ab";
+        $input_check_list = array("ba");
 
+        $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
+
+        $this->assertEquals(array("ba"), $result);
+    }
     //Check to see if multiple characters return a match of multiple anagrams
     //input-> "abc" | "acb", "bca"
     //output-> "acb", "bca"
