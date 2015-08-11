@@ -4,111 +4,37 @@
     class anagramCheckerTest extends PHPUnit_Framework_TestCase
     {
 
-    //Prints original input
-    function test_makeAnagram_printInput()
-    {
-        $test_anagramChecker = new AnagramChecker;
-        $input = "b";
+    //Check to see if single letter input matches
+    //input-> "a" | "a"
+    //output-> "a"
 
-        $result = $test_anagramChecker->makeAnagram($input);
+    //Check to see if single letter does not match
+    //input-> "a" | "b"
+    //output-> "No matches found"
 
-        $this->assertEquals("b", $result);
+    //Check to see if one match in multiple inputs
+    //input-> "a" | "a", "b"
+    //output-> "a"
 
-    }
+    //Check to see if multiple matches from multiple inputs
+    //input-> "a" | "a", "a"
+    //output-> "a", "a"
 
-    //Sets input to lowercase
-    //input-> Won
-    //output-> won
-    function test_makeAnagram_lowercase()
-    {
-        $test_anagramChecker = new AnagramChecker;
-        $input = "W";
+    //Check to see if multiple characters return a match
+    //input-> "ab" | "ab"
+    //output-> "ab"
 
-        $result = $test_anagramChecker->makeAnagram($input);
+    //Check to see if multiple characters return a match of anagram characters
+    //input-> "ab" | "ba"
+    //output-> "ba"
 
-        $this->assertEquals(array("w"), $result);
-    }
+    //Check to see if multiple characters return a match of multiple anagrams
+    //input-> "abc" | "acb", "bca"
+    //output-> "acb", "bca"
 
-
-    //Breaks input into individual letters
-    //input-> "cat"
-    //output-> "c", "a", "t"
-
-    function test_makeAnagram_letterarray()
-    {
-        $test_anagramChecker = new AnagramChecker;
-        $input = "cat";
-
-        $result = $test_anagramChecker->makeAnagram($input);
-
-        $this->assertEquals(array("c", "a", "t"), $result);
-    }
-
-    //Reassemble word from string
-    //input-> "hat"
-    //output-> "hat"
-
-    function test_makeAnagram_rearrrange_compile_word()
-    {
-        $test_anagramChecker = new AnagramChecker;
-        $input = "hat";
-
-        $result = $test_anagramChecker->makeAnagram($input);
-
-        $this->assertEquals("hat", $result);
-    }
-
-    //Create permutations from the input
-    //input-> "dog"
-    //output-> "d-o-g", "d-g-o", "g-d-o", "g-o-d", "o-g-d", "o-d-g"
-
-    function test_makeAnagram_rearrrange_letters()
-    {
-        $test_anagramChecker = new AnagramChecker;
-        $input = "dog";
-
-        $result = $test_anagramChecker->makeAnagram($input);
-
-        $this->assertEquals(array("dog", "dgo", "ogd", "odg", "god", "gdo"), $result);
-    }
-
-    //Retrieve list of possible anagrams
-    //input-> "hat"
-    //output-> "hat"
-
-    //Retrieve multiple words from list of possible anagrams
-    //input-> "hat", "dog", "car"
-    //output-> array("hat", "dog", "car")
-
-    //Find matching anagrams from the two lists
-    //input-> anagram original "end", possible matches  "the", "den", "one"
-    //output-> original "end", match "den", "end"
-
-    //Remove matching anagram from list
-    //input-> anagram original "dog", possible matches "dog", "god", "hat"
-    //out-> original "dog", match "god"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //Create loop to create anagrams
-    //Get user list of possible anagrams
-    //Put user list into array
-    //compare anagrams to user list
-    //output matches
+    //Check to see if multiple characters don't return non-matches
+    //input-> "abc" | "cab", "ddd"
+    //output-> "cab"
 
     }
 ?>
