@@ -106,6 +106,16 @@
     //Check to see if multiple characters don't return non-matches
     //input-> "abc" | "cab", "ddd"
     //output-> "cab"
+    function test_checkAnagram_multi_ana_no_match()
+    {
+        $test_anagramChecker = new AnagramChecker;
+        $input_word = "abc";
+        $input_check_list = "acb, ddd";
+
+        $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
+
+        $this->assertEquals("acb", $result);
+    }
 
     }
 ?>
