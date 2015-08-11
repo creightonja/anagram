@@ -21,6 +21,17 @@
     //input-> "a" | "b"
     //output-> "No matches found"
 
+    function test_checkAnagram_no_match()
+    {
+        $test_anagramChecker = new AnagramChecker;
+        $input_word = "a";
+        $input_check_list = "b";
+
+        $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
+
+        $this->assertEquals("No matches found", $result);
+    }
+
     //Check to see if one match in multiple inputs
     //input-> "a" | "a", "b"
     //output-> "a"
