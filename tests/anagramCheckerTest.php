@@ -50,6 +50,16 @@
     //Check to see if multiple matches from multiple inputs
     //input-> "a" | "a", "a"
     //output-> "a", "a"
+    function test_checkAnagram_multi_match()
+    {
+        $test_anagramChecker = new AnagramChecker;
+        $input_word = "a";
+        $input_check_list = array("a", "a");
+
+        $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
+
+        $this->assertEquals(array("a", "a"), $result);
+    }
 
     //Check to see if multiple characters return a match
     //input-> "ab" | "ab"
