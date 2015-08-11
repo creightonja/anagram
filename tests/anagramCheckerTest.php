@@ -92,6 +92,16 @@
     //Check to see if multiple characters return a match of multiple anagrams
     //input-> "abc" | "acb", "bca"
     //output-> "acb", "bca"
+    function test_checkAnagram_multi_ana_match()
+    {
+        $test_anagramChecker = new AnagramChecker;
+        $input_word = "abc";
+        $input_check_list = "acb, bca";
+
+        $result = $test_anagramChecker->makeAnagram($input_word, $input_check_list);
+
+        $this->assertEquals("acb, bca", $result);
+    }
 
     //Check to see if multiple characters don't return non-matches
     //input-> "abc" | "cab", "ddd"
