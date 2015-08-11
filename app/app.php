@@ -21,7 +21,7 @@
 
     $app->get("/results", function() use($app){
         $my_anagramChecker = new anagramChecker;
-        $anagram_checker = $my_anagramChecker->makeAnagramChecker($_GET["input_word"], $_GET["input_check_list"]);
+        $anagram_checker = $my_anagramChecker->makeAnagram($_GET["input_word"], $_GET["input_check_list"]);
         return $app["twig"]->render("results.html.twig", array("result" => $anagram_checker));
     });
 
