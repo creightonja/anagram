@@ -34,6 +34,16 @@
     //input-> "cat"
     //output-> "c", "a", "t"
 
+    function test_makeAnagram_letterarray()
+    {
+        $test_anagramChecker = new AnagramChecker;
+        $input = "cat";
+
+        $result = $test_anagramChecker->makeAnagram($input);
+
+        $this->assertEquals(array("c", "a", "t"), $result);
+    }
+
     //Create permutations from the input
     //input-> "dog"
     //output-> "d-o-g", "d-g-o", "g-d-o", "g-o-d", "o-g-d", "o-d-g"
